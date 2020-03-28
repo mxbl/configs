@@ -14,6 +14,7 @@ Plug 'nightsense/vimspectr'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mbbill/undotree'
 Plug 'justinmk/vim-syntax-extra'
+Plug 'jiangmiao/auto-pairs'
 " ready to clean up ??
 "Plug 'junegunn/vim-easy-align'
 "Plug 'luochen1990/rainbow'
@@ -181,6 +182,9 @@ vnoremap 5 %
 
 " execute default register
 nnoremap Q @q
+
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
 
 " }}}
 " Leader Shortcuts {{{
