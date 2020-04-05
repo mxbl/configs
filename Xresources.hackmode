@@ -1,0 +1,29 @@
+! --- Hack Mode Colorscheme --- {{{
+*.foreground:   #bcbcbc
+*.background:   #000000
+*.cursorColor:  #bcbcbc
+! black dark/light
+*.color0:       #101010
+*.color8:       #777777
+! red dark/light
+*.color1:       #d43333
+*.color9:       #f05454
+! green dark/light
+*.color2:       #5ec364
+*.color10:      #71e783
+! yellow dark/light
+*.color3:       #8b6bb6
+*.color11:      #b395e2
+! blue dark/light
+*.color4:       #69d26a
+*.color12:      #68e770
+! magenta dark/light
+*.color5:       #726dbb
+*.color13:      #9b9be2
+! cyan dark/light
+*.color6:       #3e694b
+*.color14:      #477654
+! white dark/light
+*.color7:       #909090
+*.color15:      #999999
+! }}}
