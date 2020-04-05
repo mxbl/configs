@@ -15,6 +15,9 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'mbbill/undotree'
 Plug 'justinmk/vim-syntax-extra'
 Plug 'jiangmiao/auto-pairs'
+Plug 'jremmen/vim-ripgrep'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-notes'
 " ready to clean up ??
 "Plug 'junegunn/vim-easy-align'
 "Plug 'luochen1990/rainbow'
@@ -186,6 +189,9 @@ nnoremap Q @q
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 
+" Grep word under cursor with ripgrep
+nnoremap K :Rg<CR>
+
 " }}}
 " Leader Shortcuts {{{
 let mapleader = "\<Space>"
@@ -280,3 +286,10 @@ set stl+=\
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 let g:user_emmet_leader_key='<C-E>'
+
+let g:notes_directories = ['~/docs/notes']
+
+augroup asm_ft
+    au!
+    autocmd BufNewFile,BufRead *.asm,*.s set ft=nasm 
+augroup END
