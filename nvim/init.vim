@@ -155,10 +155,10 @@ hi GitGutterChangeDelete ctermbg=NONE ctermfg=Red
 " }}}
 " Keybindings {{{
 " Miscellaneous
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-h> <C-w>h
-map <C-l> <C-w>l
+map <C-j> :call TmuxAwareSwitchWindow("j")<CR>
+map <C-k> :call TmuxAwareSwitchWindow("k")<CR>
+map <C-l> :call TmuxAwareSwitchWindow("l")<CR>
+map <C-h> :call TmuxAwareSwitchWindow("h")<CR>
 
 " leave insert mode with `jk`
 inoremap jk <esc>
@@ -293,3 +293,23 @@ augroup asm_ft
     au!
     autocmd BufNewFile,BufRead *.asm,*.s set ft=nasm 
 augroup END
+
+function! TmuxAwareSwitchWindow(direction)
+    " clear the call command 
+    echo "" 
+    let current = winnr()
+    execute 'wincmd ' . a:direction
+    if winnr() != current
+        " successfully moved to another window
+    else
+        if a:direction == "l"
+            silent !tmux select-pane -R
+        elseif a:direction == "h"
+            silent !tmux select-pane -L
+        elseif a:direction == "j"
+            silent !tmux select-pane -D
+        elseif a:direction == "k"
+            silent !tmux select-pane -U
+        endif
+    endif
+endf
