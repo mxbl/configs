@@ -18,6 +18,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'jremmen/vim-ripgrep'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
+Plug 'AndrewRadev/bufferize.vim'
 " ready to clean up ??
 "Plug 'junegunn/vim-easy-align'
 "Plug 'luochen1990/rainbow'
