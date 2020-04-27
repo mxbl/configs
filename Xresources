@@ -19,19 +19,19 @@ XTerm*selectToClipboard: true
 
 !*background:             #222D31
 !*foreground:             #d8d8d8
-*fading:                 8
+!*fading:                 8
 *fadeColor:              black
 *cursorColor:            #ff0099
 *pointerColorBackground: #2B2C2B
 *pointerColorForeground: #16A085
 
-#include "./Xresources.isotope-dark"
+#include "./.Xresources.isotope-dark"
 
 ! --- transparency --- {{{
 ! for 'fake' transparency (without Compton) uncomment the following three lines
-URxvt*inheritPixmap:            true
-URxvt*transparent:              true
-URxvt*shading:                  38
+!URxvt*inheritPixmap:            true
+!URxvt*transparent:              true
+!URxvt*shading:                  38
 ! }}}
 
 Xcursor.theme: Adwaita
@@ -39,7 +39,7 @@ Xcursor.size:  0
 
 URxvt.font:                       xft:Monaco:bold:pixelsize=14
 URxvt.depth:                      32
-URxvt.background:                 [70]black
+URxvt.background:                 [100]black
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true
