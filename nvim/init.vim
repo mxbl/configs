@@ -121,15 +121,23 @@ set showmatch        " show matching brackets
 set showmode         " don't show mode because airline shows it already
 set showcmd
 set cursorline
+set list
+set listchars=eol:¬,space:·,trail:~
 
 hi VertSplit    ctermbg=Black ctermfg=Red cterm=bold
-hi LineNr       ctermbg=Black ctermfg=235   
-hi CursorLineNr ctermbg=Black ctermfg=Red   
+hi LineNr       ctermbg=Black ctermfg=235
+hi CursorLineNr ctermbg=Black ctermfg=Red
 hi Normal       ctermbg=Black
 hi Character    ctermbg=NONE
 hi CursorLine                 ctermfg=NONE
 hi ModeMsg                    ctermfg=Green
-hi MatchParen   ctermbg=NONE  ctermfg=31    
+hi MatchParen   ctermbg=NONE  ctermfg=31
+hi NonText                    ctermfg=237
+
+" Tabs
+hi TabLine      ctermbg=234
+hi TabLineFill  ctermbg=Black
+hi TabLineSel   ctermbg=31
 
 hi TODO  ctermfg=190  ctermbg=NONE cterm=NONE
 hi FIXME ctermfg=190  ctermbg=NONE cterm=NONE
